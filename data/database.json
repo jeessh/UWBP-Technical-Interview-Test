@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Jesse Huang",
+        "major": "Computer Science",
+        "currentLocation": "San Francisco, CA",
+        "hasShowered": true
+    },
+    {
+        "name": "Abhinav Gupta",
+        "major": "Software Engineering",
+        "currentLocation": "New York, NY",
+        "hasShowered": true
+    },
+    {
+        "name": "Carolyn Zhang",
+        "major": "Data Science",
+        "currentLocation": "Seattle, WA",
+        "hasShowered": false
+    },
+    {
+        "name": "Scott Barne",
+        "major": "Information Technology",
+        "currentLocation": "Toronto, ON",
+        "hasShowered": true
+    }
+]
