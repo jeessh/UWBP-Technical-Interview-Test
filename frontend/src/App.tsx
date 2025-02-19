@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Candidate } from './types';
+import './index.css';
 
 const App: React.FC = () => {
     const [candidates, setCandidates] = useState<Candidate[]>([]);
@@ -8,9 +9,6 @@ const App: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        // Fetch candidates from the backend
-        // If using Node (JavaScript): 'http://localhost:3001/api/candidates'
-        // If using Flask (Python): 'http://127.0.0.1:5000/api/candidates'
         const fetchCandidates = async () => {
             try {
                 const URL = 'http://127.0.0.1:5000/';
@@ -29,26 +27,24 @@ const App: React.FC = () => {
         fetchCandidates();
     }, []);
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div style={{ color: 'red' }}>{error}</div>;
+    if (loading) return <div className="text-center p-4">Loading...</div>;
+    if (error) return <div className="text-red-600 p-4">{error}</div>;
 
     return (
-        <div style={{ padding: '20px' }}>
-            <h1>Interview Candidates</h1>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <div className="p-5">
+            <h1 className="text-3xl font-bold mb-6">Interview Candidates</h1>
+            <div className="flex flex-col space-y-4">
                 {candidates.map((candidate, index) => (
                     <div 
                         key={index} 
-                        style={{ 
-                            border: '1px solid #ccc', 
-                            padding: '10px', 
-                            borderRadius: '4px' 
-                        }}
+                        className="border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
                     >
-                        <h3>{candidate.name}</h3>
-                        <p>Major: {candidate.major}</p>
-                        <p>Location: {candidate.currentLocation}</p>
-                        <p>Showered: {candidate.hasShowered ? '✅' : '❌'}</p>
+                        <h3 className="text-xl font-semibold mb-2">{candidate.name}</h3>
+                        <p className="text-gray-600">Major: {candidate.major}</p>
+                        <p className="text-gray-600">Location: {candidate.currentLocation}</p>
+                        <p className="text-gray-600">
+                            Showered: <span>{candidate.hasShowered ? '✅' : '❌'}</span>
+                        </p>
                     </div>
                 ))}
             </div>
