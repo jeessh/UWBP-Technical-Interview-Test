@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Simplify CORS configuration to allow all origins during development
 CORS(app)
 
-@app.route('/api/candidates', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_candidates():
     try:
         current_dir = os.path.dirname(os.path.abspath(__file__))
