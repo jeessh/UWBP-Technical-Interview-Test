@@ -1,28 +1,17 @@
 # UWBP Technical Interview Application
 
-This is a full-stack web application that displays interview candidate information. It includes both Node.js and Flask backends, and a React TypeScript frontend.
+This is a full-stack web application that displays interview candidate information. It includes a Flask backend, and a React TypeScript frontend.
 
 ## Project Structure
 
 ```
 UWBP-Technical-Interview/
 ├── frontend/               # React TypeScript frontend
-├── backend-node/          # Node.js/Express backend
 ├── backend-flask/         # Flask backend
 └── data/                  # Shared data files
 ```
 
 ## Setup and Running
-
-### Node.js Backend
-
-```bash
-cd backend-node
-npm install
-node server.js
-```
-
-The Node.js server will run on http://localhost:3001
 
 ### Flask Backend (Alternative)
 

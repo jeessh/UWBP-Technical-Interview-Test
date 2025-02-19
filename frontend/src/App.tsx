@@ -13,7 +13,9 @@ const App: React.FC = () => {
         // If using Flask (Python): 'http://127.0.0.1:5000/api/candidates'
         const fetchCandidates = async () => {
             try {
-                const response = await axios.get<Candidate[]>('http://127.0.0.1:5000/api/candidates');
+                const URL = 'http://127.0.0.1:5000/api/candidates';
+                console.log("Fetching candidates from backend at ", URL);
+                const response = await axios.get<Candidate[]>(URL);
                 setCandidates(response.data);
                 setError('');
             } catch (err) {
