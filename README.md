@@ -1,7 +1,5 @@
 # UWBP Technical Interview Application
 
-This is a full-stack web application that displays interview candidate information. It includes a Flask backend, and a React TypeScript frontend.
-
 ## Project Structure
 
 ```
@@ -13,7 +11,7 @@ UWBP-Technical-Interview/
 
 ## Setup and Running
 
-### Flask Backend (Alternative)
+### Backend
 
 ```bash
 cd backend-flask
